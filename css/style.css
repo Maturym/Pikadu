@@ -341,22 +341,24 @@ h2, h3, h4, h1, p, span{
   background:#E5E5E5;
   border: none;
 }
-.main_post>h2{
+.post-header{
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: black;
   padding-top: 23px;
-  padding-bottom: 23px;
+  padding-bottom: 3px;
   padding-left: 31px;
   background: #FFFFFF;
   border: 1px solid #E8E8E8;
   margin-bottom: 16px;
+  width: calc(100% - 42px);
 }
 .main_post>textarea{
   border: none;
   resize: none;
   overflow: auto;
+}
+.post-text{
   padding-right: 20px;
   padding-bottom: 20px;
   padding-left: 23px;
@@ -365,8 +367,8 @@ h2, h3, h4, h1, p, span{
   font-size: 14px;
   line-height: 22px;
   color: #595959;
-  min-height: 310px;
-  width: calc(100% - 42px);
+  min-height: 305px;
+  width: calc(100% - 50px);
   margin-bottom: 15px;
 }
 .main_post>textarea:hover,
@@ -374,6 +376,12 @@ h2, h3, h4, h1, p, span{
 .main_post>textarea:focus{
   outline: none;
 }
+.textarea::-moz-placeholder {color: black;}
+.textarea::-webkit-textarea-placeholder {color: black;}
+.textarea::-ms-input-placeholder {color: black;}
+.textarea:-ms-input-placeholder {color: black;}
+.post-header::placeholder {color: black;}
+
 .main_nav-post{
   background: transparent;
   margin: 0;
@@ -382,15 +390,22 @@ h2, h3, h4, h1, p, span{
 }
 .main_nav-share>button{
   filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.0015));
-  background: url('../img/picture.svg') #ffffff no-repeat 12px 50%;
+  background: url('../img/video.svg') #ffffff no-repeat 12px 50%;
   border: 1px solid #FFC53D;
   border-radius: 4px;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   color: #FFC53D;
-  padding: 13px 16px 13px 36px;
+  padding: 13px 28px 13px 38px;
   margin-right: 12px;
+  cursor: pointer;
+}
+.main_nav-share>button:last-child{
+  background: url('../img/picture.svg') #ffffff no-repeat 12px 50%;
+}
+.main_nav-share>button:hover{
+  opacity: 85%;
 }
 .main_nav-share>.publish{
   margin-right: 36px;
